@@ -1,75 +1,65 @@
-<img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
+# Product Management System
 
-Drupal is an open source content management platform supporting a variety of
-websites ranging from personal weblogs to large community-driven websites. For
-more information, visit the Drupal website, [Drupal.org][Drupal.org], and join
-the [Drupal community][Drupal community].
+## Overview
+The **Product Management System** is a simple PHP-based application that allows users to manage products using an XML file as a data storage mechanism. It provides functionalities for listing existing products in an HTML table and inserting new products through a form.
 
-## Contributing
+## Features
+- Display a list of products stored in an XML file.
+- Add new products through an HTML form.
+- Ensure data consistency and handle special fields like CDATA sections.
 
-Drupal is developed on [Drupal.org][Drupal.org], the home of the international
-Drupal community since 2001!
+## Main Components
+### `products.php`
+- Displays a table containing all products stored in `products.xml`.
+- Uses the `Products` class to read and render product data.
 
-[Drupal.org][Drupal.org] hosts Drupal's [GitLab repository][GitLab repository],
-its [issue queue][issue queue], and its [documentation][documentation]. Before
-you start working on code, be sure to search the [issue queue][issue queue] and
-create an issue if your aren't able to find an existing issue.
+### `lib.php`
+Defines the `Products` class, which includes the following methods:
+- `print_html_table_with_all_products()`: Generates and prints an HTML table containing all products.
+- `print_html_of_one_product_line($prod)`: Helper function that prints a single product row inside the table.
+- `insert_product_xml($prod)`: Adds a new product entry to `products.xml`, ensuring data integrity.
+- `get_post_data()`: Retrieves user-submitted form data for product insertion.
+- `add_cdata_child($parent, $name, $value)`: Handles special characters using CDATA sections.
 
-Every issue on Drupal.org automatically creates a new community-accessible fork
-that you can contribute to. Learn more about the code contribution process on
-the [Issue forks & merge requests page][issue forks].
+### `viewproducts.php`
+- Contains an HTML form for adding a new product.
+- Validates user input (e.g., the `NAME` field is mandatory).
+- Processes form data and stores the new product entry in `products.xml`.
 
-## Usage
+## Installation Instructions
+### Prerequisites
+- Web Server: Apache or Nginx
+- PHP: Version 7.4 or later
+- Permissions: Write permissions for the XML file (`products.xml`)
+- PHP Extensions: `libxml`, `simplexml`
 
-For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
-guides, API references, and more by visiting Drupal's [documentation
-page][documentation].
+### Installation Steps
+1. **Download and Upload Files**
+   - Download all project files (`products.php`, `lib.php`, `viewproducts.php`, `products.xml`).
+   - Upload them to the appropriate directory on your web server (e.g., `/var/www/html/`).
 
-You can quickly extend Drupal's core feature set by installing any of its
-[thousands of free and open source modules][modules]. With Drupal and its
-module ecosystem, you can often build most or all of what your project needs
-before writing a single line of code.
+2. **Set File Permissions**
+   - Ensure that the `products.xml` file has write permissions:
+     ```sh
+     chmod 666 /var/www/html/products.xml
+     ```
 
-## Changelog
+3. **Verify PHP Installation**
+   - Create a file named `info.php` in your web root directory with the following content:
+     ```php
+     <?php
+     phpinfo();
+     ?>
+     ```
+   - Open `http://localhost/info.php` in your browser to verify PHP installation.
 
-Drupal keeps detailed [change records][changelog]. You can search Drupal's
-changes for a record of every notable breaking change and new feature since
-2011.
+4. **Run the Application**
+   - Open `products.php` in your browser (e.g., `http://localhost/products.php`) to view the product list.
+   - Use `viewproducts.php` to add new products.
 
-## Security
+## License
+This project is open-source and available under the MIT License.
 
-For a list of security announcements, see the [Security advisories
-page][Security advisories] (available as [an RSS feed][security RSS]). This
-page also describes how to subscribe to these announcements via email.
+---
+Feel free to contribute and improve the system! 🚀
 
-For information about the Drupal security process, or to find out how to report
-a potential security issue to the Drupal security team, see the [Security team
-page][security team].
-
-## Need a helping hand?
-
-Visit the [Support page][support] or browse [over a thousand Drupal
-providers][service providers] offering design, strategy, development, and
-hosting services.
-
-## Legal matters
-
-Know your rights when using Drupal by reading Drupal core's
-[license](/core/LICENSE.txt).
-
-Learn about the [Drupal trademark and logo policy here][trademark].
-
-[Drupal.org]: https://www.drupal.org
-[Drupal community]: https://www.drupal.org/community
-[GitLab repository]: https://git.drupalcode.org/project/drupal
-[issue queue]: https://www.drupal.org/project/issues/drupal
-[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
-[documentation]: https://www.drupal.org/documentation
-[changelog]: https://www.drupal.org/list-changes/drupal
-[modules]: https://www.drupal.org/project/project_module
-[security advisories]: https://www.drupal.org/security
-[security RSS]: https://www.drupal.org/security/rss.xml
-[security team]: https://www.drupal.org/drupal-security-team
-[service providers]: https://www.drupal.org/drupal-services
-[support]: https://www.drupal.org/support
-[trademark]: https://www.drupal.com/trademark

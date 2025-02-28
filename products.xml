@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebsite>
+    <LAST_UPDATE>2025-02-17 12:52:37</LAST_UPDATE>
+    <PRODUCTS>
+        <PRODUCT>
+            <NAME>
+                <![CDATA[ROCKET COMPLETE SKATEBOARD RASTA FADE 8.0" Complete Skateboard από τη Rocket σε Μαύρο Rasta χρώμα]]>
+            </NAME>
+
+            <PRICE>
+                        64.9
+                    </PRICE>
+            <QUANTITY>3</QUANTITY>
+            <CATEGORY id="113000102">
+                        BOARDS-&gt;Complete Skateboards
+                    </CATEGORY>
+            <MANUFACTURER>
+                        ROCKET
+                    </MANUFACTURER>
+            <BARCODE>
+                <![CDATA[5056245544934]]>
+            </BARCODE>
+            <WEIGHT>
+                <![CDATA[6.1kg]]>
+            </WEIGHT>
+            <INSTOCK>Y</INSTOCK>
+            <AVAILABILITY>Άμεσα Διαθέσιμο</AVAILABILITY>
+        </PRODUCT>
+        <PRODUCT>
+            <NAME>
+                <![CDATA[TONY HAWK SS540 COMPLETE SKATE HIGHWAY MULTI 7.5" Tony Hawk Complete Skateboard σε χρώμα μαύρο]]>
+            </NAME>
+
+            <PRICE>
+                        70
+                    </PRICE>
+            <QUANTITY>3</QUANTITY>
+            <CATEGORY id="113000102">
+                        BOARDS-&gt;Complete Skateboards
+                    </CATEGORY>
+            <MANUFACTURER>
+                        ROCKET
+                    </MANUFACTURER>
+            <BARCODE>
+                <![CDATA[5056245544934]]>
+            </BARCODE>
+            <WEIGHT>
+                <![CDATA[7.1kg]]>
+            </WEIGHT>
+            <INSTOCK>Y</INSTOCK>
+            <AVAILABILITY>Άμεσα Διαθέσιμο</AVAILABILITY>
+        </PRODUCT>
+    <PRODUCT><NAME><![CDATA[test]]></NAME><PRICE>0.01</PRICE><QUANTITY>-1</QUANTITY><CATEGORY id="">test</CATEGORY><CATEGORY>test</CATEGORY><MANUFACTURER/><BARCODE><![CDATA[]]></BARCODE><WEIGHT><![CDATA[]]></WEIGHT><INSTOCK>N</INSTOCK><AVAILABILITY/></PRODUCT></PRODUCTS>
+</mywebsite>

@@ -56,10 +56,3 @@ Defines the `Products` class, which includes the following methods:
 4. **Run the Application**
    - Open `products.php` in your browser (e.g., `http://localhost/products.php`) to view the product list.
    - Use `viewproducts.php` to add new products.
-
-## License
-This project is open-source and available under the MIT License.
-
----
-Feel free to contribute and improve the system! 🚀
-
